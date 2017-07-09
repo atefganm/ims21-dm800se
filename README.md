@@ -4,7 +4,7 @@ Using https://github.com/OpenPLi/openpli-oe-core as base.
 
 Open a terminal inside "openpli-oe-core" folder and enter:
 ```
-git submodule add https://github.com/ims21/dm800se-bsp.git
+git submodule add https://github.com/ims21/dm800se.git
 ```
 Now edit the "Makefile" file and add the BSP layer to it:
 ```
