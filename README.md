@@ -15,4 +15,12 @@ Now edit the "Makefile" file and add the BSP layer to it:
 ```
 Remove the "/dm800se/classes/image_types_nfi.bbclass" file because it doesn't support "jffs2nfi" images.
 
-We're independent so if you think you can help you're welcome to send us merge requests :).
+If you want remove this BSP layer, use:
+# Remove the submodule entry from .git/config
+git submodule deinit -f path/to/submodule
+
+# Remove the submodule directory from the superproject's .git/modules directory
+rm -rf .git/modules/path/to/submodule
+
+# Remove the entry in .gitmodules and remove the submodule directory located at path/to/submodule
+git rm -f path/to/submodule
