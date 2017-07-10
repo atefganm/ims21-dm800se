@@ -1,26 +1,35 @@
-Dreambox BSP layer for dm800se only
+Dreambox BSP layer for dm800se only under https://github.com/OpenPLi/openpli-oe-core.
 
-Using https://github.com/OpenPLi/openpli-oe-core as base.
+Run in your oe directory:  git submodule add https://github.com/ims21/dm800se.git
 
-Open a terminal inside "openpli-oe-core" folder and enter:
-```
-git submodule add https://github.com/ims21/dm800se.git
-```
-Now edit the "Makefile" file and add the BSP layer to it:
-```
+In oe directory add into "Makefile" dm800se BSP layer:
+
 	$(CURDIR)/meta-openpli \
 	$(CURDIR)/meta-dream \
 +	$(CURDIR)/dm800se \
 	$(CURDIR)/meta-vuplus \
-```
-Remove the "/dm800se/classes/image_types_nfi.bbclass" file because it doesn't support "jffs2nfi" images.
 
-If you want remove this BSP layer, use:
+Remove the "/dm800se/classes/image_types_nfi.bbclass" (it doesn't support "jffs2nfi" images).
+
+Build image - in oe directory run:
+MACHINE=dm800se make image
+
+
+Build in oe directory feed:
+cd build
+source env.source
+MACHINE=dm800se bitbake openpli-enigma2-feed
+
+You can rebuild then indexes (not needed usualy):
+MACHINE=dm800se bitbake package-index
+
+
+If you want in future remove this dm800se BSP layer, use in oe directory this 3 steps:
 # Remove the submodule entry from .git/config
-git submodule deinit -f path/to/submodule
+1) git submodule deinit -f dm800se
 
 # Remove the submodule directory from the superproject's .git/modules directory
-rm -rf .git/modules/path/to/submodule
+2) rm -rf .git/modules/dm800se
 
 # Remove the entry in .gitmodules and remove the submodule directory located at path/to/submodule
-git rm -f path/to/submodule
+3) git rm -f dm800se
