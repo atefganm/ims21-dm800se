@@ -11,7 +11,7 @@ In oe directory add into "Makefile" dm800se BSP layer:
 +	$(CURDIR)/dm800se \
 	$(CURDIR)/meta-vuplus \
 ```
-Remove the "/dm800se/classes/image_types_nfi.bbclass" (it doesn't support "jffs2nfi" images).
+Remove the "/meta-dream/classes/image_types_nfi.bbclass" (it doesn't support "jffs2nfi" images).
 
 Build image - in oe directory run:
 ```
