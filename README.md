@@ -24,10 +24,15 @@ cd build
 source env.source
 MACHINE=dm800se bitbake openpli-enigma2-feed
 ```
-You can rebuild then indexes (not needed usualy):
+You can rebuild then indexes (not needed usually):
 ```
 MACHINE=dm800se bitbake package-index
 ```
+
+
+
+
+
 
 If you want in future remove this dm800se BSP layer, use in oe directory this 3 steps:
 ```
