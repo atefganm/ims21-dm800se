@@ -113,3 +113,12 @@ After install box use in telnet command blkid to know UUID and edit /etc/fstab f
 UUID=XXXX-XXXX /media/.auto auto defaults 0 0
 UUID=XXXX-XXXX-XXXX-XXXXXXXXXXXX /media/usb auto defaults 0 0
 
+
+Flash into internal flash:
+==========================
+If you need space, build image with uncommented line there in .../dm800se/conf/machine/dm800se.conf
+
+IMAGE_INSTALL_remove = "samba-base"
+
+set bios as on dm800se_internal_flash.PNG
+
