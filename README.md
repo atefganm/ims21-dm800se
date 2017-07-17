@@ -30,8 +30,10 @@ MACHINE=dm800se bitbake package-index
 ```
 
 
-
-
+update dm800 ... in dm800se run:
+```
+git pull origin master
+```
 
 
 If you want in future remove this dm800se BSP layer, use in oe directory this 3 steps:
