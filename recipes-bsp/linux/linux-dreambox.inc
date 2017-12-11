@@ -28,7 +28,7 @@ KERNEL_BUILTIN_MODULES_dm8000 = "\
 	"
 KERNEL_BUILTIN_MODULES_dm800se = "\
 	kernel-module-block2mtd \
-	kernel-module-stv0299 \
+	kernel-module-stv0299-3.2-dm800se \
 	"
 KERNEL_BUILTIN_MODULES_dm7020hd = "\
 	kernel-module-block2mtd \
